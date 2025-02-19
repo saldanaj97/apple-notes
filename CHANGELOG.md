@@ -4,8 +4,9 @@
 
 This update adds a workaround for text not being formatted when being pasted in. Prior to this, the text pasted in the search bar would be displayed as one single line therefore resulting in lack of correct formatting when being written to a new note.
 
-- **Improved 'New Note' Functionality**: 'New Note' command has been updated to take in a title in the search bar which then goes on to a 'NewNoteForm' view that allows the user to paste in text with a view of the text in its intended format rather than one line of text.
-- **Added New 'New Note from Clipboard' Command**: The 'New Note from Clipboard' command will now ask for a title in the search bar and will then create a note with the data from the clipboard while maintaining format.
+- **Improved 'New Note' Functionality**: 'New Note' command has been updated to take in a title in the search bar which then goes on to a 'NewNoteForm' view that allows the user to paste in text with a view of the text in its intended format rather than one line of text. Since apple notes only offers dashed, bulleted, and numbered lists, this will only format those types of lists.
+
+- **Added New 'Quick Note from Clipboard' Command**: The 'Quick Note from Clipboard' command will now ask for a title in the search bar and will then create a note with the data from the clipboard while maintaining format.
 
 ## [Bug Fix Update] - 2024-11-22
 
