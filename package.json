@@ -50,7 +50,7 @@
     },
     {
       "name": "quick-note",
-      "title": "Quick note from Clipboard",
+      "title": "Quick Note from Clipboard",
       "subtitle": "Apple Notes",
       "description": "Create a new note in Apple Notes with the current content of your clipboard.",
       "mode": "no-view",
