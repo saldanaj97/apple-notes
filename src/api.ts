@@ -1,16 +1,19 @@
 import { runAppleScript } from "@raycast/utils";
 
-import { escapeDoubleQuotes } from "./helpers";
+import { escapeDoubleQuotes, fixNoteFormatting } from "./helpers";
 
-export async function createNote(text?: string) {
+export async function createNote(note?: string, text?: string) {
+  const escapedNoteTitle = note ? escapeDoubleQuotes(note) : "";
   const escapedText = text ? escapeDoubleQuotes(text) : "";
+  const { noteInHtmlFormat, noteTitleInHtmlFormat } = fixNoteFormatting(escapedNoteTitle, escapedText);
 
   return runAppleScript(`
     tell application "Notes"
       activate
-      set newNote to make new note
       if ("${escapedText}" is not "") then
-        set body of newNote to "${escapedText}"
+        set newNote to make new note with properties {body: "${noteInHtmlFormat}"}
+      else
+        set newNote to make new note with properties {body: "${noteTitleInHtmlFormat}"}
       end if
       set selection to newNote
       show newNote
