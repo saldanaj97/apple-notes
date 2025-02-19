@@ -65,7 +65,7 @@ export default function NewNoteForm({ draftValues }: AddTextFormProps) {
       }
     >
       <Form.TextField {...itemProps.note} title="Note" placeholder="Note Title" />
-      <Form.TextArea enableMarkdown title="Text" {...itemProps.text} />
+      <Form.TextArea title="Text" {...itemProps.text} />
     </Form>
   );
 }
